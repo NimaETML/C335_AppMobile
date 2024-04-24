@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Support_AppMobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Support_AppMobile"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="True"
+    Shell.BackgroundColor="Yellow"
+    Title="Support_AppMobile">
+
+
+    <Tab Title="Home">
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}" 
+        Route="MainPage"/>
+     </Tab>
+
+    <Tab Title="AddPage">
+        <ShellContent
+        Title="AddPage"
+        ContentTemplate="{DataTemplate local:AddPage}" 
+        Route="AddPage"/>
+    </Tab>
+
+    <Tab Title="MvvmTestPage">
+        <ShellContent
+        Title="MvvmTestPage"
+        ContentTemplate="{DataTemplate local:MvvmTestPage}" 
+        Route="MvvmTestPage"/>
+    </Tab>
+</Shell>
