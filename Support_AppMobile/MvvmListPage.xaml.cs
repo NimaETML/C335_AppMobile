@@ -1,9 +1,9 @@
 namespace Support_AppMobile
 {
-    public partial class MvvmTestPage : ContentPage
+    public partial class MvvmListPage : ContentPage
     {
 
-        public MvvmTestPage()
+        public MvvmListPage()
         {
             InitializeComponent();
         }

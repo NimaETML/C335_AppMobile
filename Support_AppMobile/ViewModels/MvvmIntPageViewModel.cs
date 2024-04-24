@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-
 namespace Support_AppMobile.ViewModels;
 
-public partial class MvvmTestPageViewModel : ObservableObject
+public partial class MvvmIntPageViewModel : ObservableObject
 {
 
     [ObservableProperty]

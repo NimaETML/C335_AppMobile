@@ -64,8 +64,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="MvvmTestPage.xaml.cs">
-	    <DependentUpon>MvvmTestPage.xaml</DependentUpon>
+	  <Compile Update="MvvmListPage.xaml.cs">
+	    <DependentUpon>MvvmListPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="MvvmIntPage.xaml.cs">
+	    <DependentUpon>MvvmIntPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="AddPage.xaml.cs">
 	    <DependentUpon>AddPage.xaml</DependentUpon>
@@ -76,7 +79,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="MvvmTestPage.xaml">
+	  <MauiXaml Update="MvvmListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MvvmIntPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ReadPage.xaml">

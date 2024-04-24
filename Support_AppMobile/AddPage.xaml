@@ -79,10 +79,10 @@
         </Grid>
 
         <Button
-        x:Name="BtnMvvmAdd"
-        Text="MVVM add" 
-        SemanticProperties.Hint="Opens MVVM test"
-        Clicked="OnClickBtnMvvmAdd"
+        x:Name="BtnMvvmInt"
+        Text="MVVM Int" 
+        SemanticProperties.Hint="Opens MVVM link int"
+        Clicked="OnClickBtnMvvmInt"
         HorizontalOptions="Fill" />
     </VerticalStackLayout>
 </ContentPage>

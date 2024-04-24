@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Support_AppMobile.MvvmListPage"
+             xmlns:ViewModels="clr-namespace:Support_AppMobile.ViewModels"
+             Title="MvvmListPage">
+
+    <ContentPage.BindingContext>
+        <ViewModels:MvvmListPageViewModel />
+	</ContentPage.BindingContext>
+    
+    
+    <VerticalStackLayout>
+        <Label 
+        Text="MVVM List"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" FontAttributes="Bold" FontSize="Title"/>
+
+        <HorizontalStackLayout Spacing="10" Padding="10" >
+            <Label Text="Make a wish:" VerticalTextAlignment="Center" />
+            <Entry Margin="5,0,0,0" Text="{Binding WishEntry}" x:Name="wishEntry" MinimumWidthRequest="300" />
+
+        </HorizontalStackLayout>
+
+        <Button BorderColor="AliceBlue"
+                    BorderWidth="5"
+                    Margin="0,5,0,0"
+                    Text="Add"
+                    Command="{Binding AddWishCommand}"
+                    CommandParameter="{Binding Source={x:Reference wishEntry}, Path=Text}"
+                    MaximumWidthRequest="300">
+        </Button>
+        
+        <Label Text="Content of the magic lamp" FontSize="Subtitle" HorizontalTextAlignment="Center" Margin="0,20,0,0" />
+        <Border Margin="15,0,15,0">
+            <ListView Margin="0,5,0,0" ItemsSource="{Binding Wishes}" />
+        </Border>
+
+    </VerticalStackLayout>
+</ContentPage>

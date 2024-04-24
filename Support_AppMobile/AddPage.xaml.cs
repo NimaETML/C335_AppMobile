@@ -8,9 +8,9 @@ public partial class AddPage : ContentPage
 	}
 
 
-    private async void OnClickBtnMvvmAdd(object sender, EventArgs e)
+    private async void OnClickBtnMvvmInt(object sender, EventArgs e)
 	{
-        await Navigation.PushAsync(new MvvmTestPage());
+        await Navigation.PushAsync(new MvvmIntPage());
     }
 
 }

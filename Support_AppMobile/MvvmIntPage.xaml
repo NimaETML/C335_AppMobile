@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Support_AppMobile.MvvmTestPage"
+             x:Class="Support_AppMobile.MvvmIntPage"
              xmlns:ViewModels="clr-namespace:Support_AppMobile.ViewModels"
              xmlns:s="clr-namespace:System;assembly=mscorlib"
-             Title="MvvmTestPage">
+             Title="MvvmIntPage">
 
     <ContentPage.BindingContext>
-        <ViewModels:MvvmTestPageViewModel />
+        <ViewModels:MvvmIntPageViewModel />
 	</ContentPage.BindingContext>
-    
-    
+
+
     <VerticalStackLayout>
         <Label 
-        Text="MVVM test"
+        Text="MVVM Int"
         VerticalOptions="Center" 
-        HorizontalOptions="Center" />
+        HorizontalOptions="Center" FontAttributes="Bold" FontSize="Title"/>
 
         <Entry Text="{Binding Counter}" />
 
@@ -24,6 +24,7 @@
                 <s:Int32>5</s:Int32>
             </Button.CommandParameter>
         </Button>
-
+        
     </VerticalStackLayout>
+    
 </ContentPage>

@@ -24,10 +24,17 @@
         Route="AddPage"/>
     </Tab>
 
-    <Tab Title="MvvmTestPage">
+    <Tab Title="MvvmIntPage">
         <ShellContent
-        Title="MvvmTestPage"
-        ContentTemplate="{DataTemplate local:MvvmTestPage}" 
-        Route="MvvmTestPage"/>
+        Title="MvvmIntPage"
+        ContentTemplate="{DataTemplate local:MvvmIntPage}" 
+        Route="MvvmIntPage"/>
+    </Tab>
+
+    <Tab Title="MvvmListPage">
+        <ShellContent
+        Title="MvvmListPage"
+        ContentTemplate="{DataTemplate local:MvvmListPage}" 
+        Route="MvvmListPage"/>
     </Tab>
 </Shell>
