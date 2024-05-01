@@ -17,30 +17,30 @@
         Route="MainPage"/>
     </Tab>
 
-    <Tab Title="AddPage">
+    <Tab Title="Animation">
         <ShellContent
-        Title="AddPage"
-        ContentTemplate="{DataTemplate local:AddPage}" 
-        Route="AddPage"/>
+        Title="Animation"
+        ContentTemplate="{DataTemplate local:AnimationPage}" 
+        Route="AnimationPage"/>
     </Tab>
 
-    <Tab Title="MvvmIntPage">
+    <Tab Title="MvvmInt">
         <ShellContent
-        Title="MvvmIntPage"
+        Title="MvvmInt"
         ContentTemplate="{DataTemplate local:MvvmIntPage}" 
         Route="MvvmIntPage"/>
     </Tab>
 
-    <Tab Title="MvvmListPage">
+    <Tab Title="MvvmList">
         <ShellContent
-        Title="MvvmListPage"
+        Title="MvvmList"
         ContentTemplate="{DataTemplate local:MvvmListPage}" 
         Route="MvvmListPage"/>
     </Tab>
 
-    <Tab Title="MvvmObjectPage">
+    <Tab Title="MvvmObject">
         <ShellContent
-        Title="MvvmObjectPage"
+        Title="MvvmObject"
         ContentTemplate="{DataTemplate local:MvvmObjectPage}" 
         Route="MvvmObjectPage"/>
     </Tab>

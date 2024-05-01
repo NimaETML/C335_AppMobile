@@ -1,8 +1,8 @@
 namespace Support_AppMobile;
 
-public partial class AddPage : ContentPage
+public partial class AnimationPage : ContentPage
 {
-	public AddPage()
+	public AnimationPage()
 	{
 		InitializeComponent();
 	}
@@ -12,5 +12,11 @@ public partial class AddPage : ContentPage
 	{
         await Navigation.PushAsync(new MvvmIntPage());
     }
+
+	// PAS FINI
+	private async void RotateLeft(object sender, EventArgs e)
+	{
+
+	}
 
 }

@@ -74,8 +74,8 @@
 	  <Compile Update="MvvmIntPage.xaml.cs">
 	    <DependentUpon>MvvmIntPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="AddPage.xaml.cs">
-	    <DependentUpon>AddPage.xaml</DependentUpon>
+	  <Compile Update="AnimationPage.xaml.cs">
+	    <DependentUpon>AnimationPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="ReadPage.xaml.cs">
 	    <DependentUpon>ReadPage.xaml</DependentUpon>
@@ -95,7 +95,7 @@
 	  <MauiXaml Update="ReadPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="AddPage.xaml">
+	  <MauiXaml Update="AnimationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
