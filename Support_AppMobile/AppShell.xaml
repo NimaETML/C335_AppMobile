@@ -15,7 +15,7 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}" 
         Route="MainPage"/>
-     </Tab>
+    </Tab>
 
     <Tab Title="AddPage">
         <ShellContent
@@ -36,5 +36,12 @@
         Title="MvvmListPage"
         ContentTemplate="{DataTemplate local:MvvmListPage}" 
         Route="MvvmListPage"/>
+    </Tab>
+
+    <Tab Title="MvvmObjectPage">
+        <ShellContent
+        Title="MvvmObjectPage"
+        ContentTemplate="{DataTemplate local:MvvmObjectPage}" 
+        Route="MvvmObjectPage"/>
     </Tab>
 </Shell>

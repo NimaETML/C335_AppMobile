@@ -10,7 +10,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace Support_AppMobile.ViewModels;
 
-public partial class MvvmListPageViewModel : ObservableObject
+public sealed partial class MvvmListPageViewModel : ObservableObject
 {
 
     [ObservableProperty]
