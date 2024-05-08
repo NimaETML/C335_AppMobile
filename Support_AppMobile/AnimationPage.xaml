@@ -5,7 +5,7 @@
              Title="AnimationPage">
     <VerticalStackLayout>
         <Label 
-        Text="Welcome to .NET MAUI!"
+        Text="Animations !!!"
         VerticalOptions="Center" 
         HorizontalOptions="Center" />
 
@@ -79,10 +79,86 @@
         </Grid>
 
         <Button
-        x:Name="BtnMvvmInt"
-        Text="MVVM Int" 
+        x:Name="BtnMvvmAnimationPage"
+        Text="MVVM Animation" 
+        SemanticProperties.Hint="Opens MVVM Animation page"
+        Clicked="OnClickBtnMvvmAnimationPage"
+        HorizontalOptions="Fill"
+            Margin="10" />
+
+        <Image
+            x:Name="AnimationPageImage"
+            Source="readme_logo.png"
+            HeightRequest="165"
+            Aspect="AspectFit"
+            SemanticProperties.Description="slay logo i made"
+            Margin="28"/> 
+
+        <Button
+        x:Name="BtnCancelAnimation"
+        Text="Cancel all animations" 
         SemanticProperties.Hint="Opens MVVM link int"
-        Clicked="OnClickBtnMvvmInt"
-        HorizontalOptions="Fill" />
+        Clicked="CancelAnimation"
+        HorizontalOptions="Fill"
+            Margin="5" />
+        
+        <StackLayout Orientation="Horizontal" Spacing="10" Margin="5">
+            <Button
+            x:Name="BtnRotateLeft"
+            Text="Left" 
+            Clicked="RotateLeft"
+            HorizontalOptions="FillAndExpand" />
+
+        <Button
+            x:Name="BtnRotateRight"
+            Text="Right" 
+            Clicked="RotateRight"
+            HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="10" Margin="5">
+            <Button
+            x:Name="BtnScaleUp"
+            Text="Scale Up" 
+            Clicked="ScaleUp"
+            HorizontalOptions="FillAndExpand" />
+
+        <Button
+            x:Name="BtnScaleDown"
+            Text="Scale Down" 
+            Clicked="ScaleDown"
+            HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button
+            x:Name="BtnTranslateLeft"
+            Text="Go Left" 
+            Clicked="TranslateLeft"
+            HorizontalOptions="FillAndExpand"
+            Margin="6" />
+
+            <Button
+            x:Name="BtnTranslateRight"
+            Text="Go Right" 
+            Clicked="TranslateRight"
+            HorizontalOptions="FillAndExpand"
+            Margin="6" />
+
+            <Button
+            x:Name="BtnTranslateUp"
+            Text="Go Up" 
+            Clicked="TranslateUp"
+            HorizontalOptions="FillAndExpand"
+            Margin="6" />
+
+            <Button
+            x:Name="BtnTranslateDown"
+            Text="Go Down" 
+            Clicked="TranslateDown"
+            HorizontalOptions="FillAndExpand"
+            Margin="6" />
+        </StackLayout>
+
     </VerticalStackLayout>
 </ContentPage>

@@ -65,6 +65,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="MvvmAnimationPage.xaml.cs">
+	    <DependentUpon>MvvmAnimationPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="MvvmObjectPage.xaml.cs">
 	    <DependentUpon>MvvmObjectPage.xaml</DependentUpon>
 	  </Compile>
@@ -83,6 +86,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="MvvmAnimationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MvvmObjectPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
