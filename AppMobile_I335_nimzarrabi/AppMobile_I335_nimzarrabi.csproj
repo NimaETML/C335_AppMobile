@@ -14,17 +14,17 @@
 		<!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
 
 		<OutputType>Exe</OutputType>
-		<RootNamespace>TabPage</RootNamespace>
+		<RootNamespace>AppMobile_I335_nimzarrabi</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>TabPage</ApplicationTitle>
+		<ApplicationTitle>AppMobile_I335_nimzarrabi</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.tabpage</ApplicationId>
+		<ApplicationId>com.companyname.appmobile_i335_nimzarrabi</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -57,57 +57,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.21" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.21" />
+	  <None Remove="Resources\Images\ReadMeLogo.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="SensorPage.xaml.cs">
-	    <DependentUpon>SensorPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="MvvmAnimationPage.xaml.cs">
-	    <DependentUpon>MvvmAnimationPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="MvvmObjectPage.xaml.cs">
-	    <DependentUpon>MvvmObjectPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="MvvmListPage.xaml.cs">
-	    <DependentUpon>MvvmListPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="MvvmIntPage.xaml.cs">
-	    <DependentUpon>MvvmIntPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="AnimationPage.xaml.cs">
-	    <DependentUpon>AnimationPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="ReadPage.xaml.cs">
-	    <DependentUpon>ReadPage.xaml</DependentUpon>
+	  <Compile Update="FlyoutPage.xaml.cs">
+	    <DependentUpon>FlyoutPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="SensorPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="MvvmAnimationPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="MvvmObjectPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="MvvmListPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="MvvmIntPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="ReadPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="AnimationPage.xaml">
+	  <MauiXaml Update="FlyoutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

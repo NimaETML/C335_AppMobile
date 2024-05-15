@@ -1,4 +1,4 @@
-﻿namespace Support_AppMobile
+﻿namespace AppMobile_I335_nimzarrabi
 {
     public partial class MainPage : ContentPage
     {
@@ -20,15 +20,6 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
-
-        private async void BtnReadPage(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ReadPage());
-        }
-
-        private async void OnClickBtnMvvmSensorPage(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SensorPage());
-        }
     }
+
 }

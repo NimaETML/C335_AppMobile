@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile_I335_nimzarrabi.FlyoutPage" Title="FlyoutPage">
+    <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+        <Image
+                Source="appmobile_palette.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Slay logo i made" />
+
+        <Label
+                Text="Flyout page 1"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+        <Label
+                Text="this is the FIRST Flyout Page"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="this is the layout page, it has a cool image" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <BoxView Color="Green" />
+            <Label Text="Row 0, Column 0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Column="1"
+                 Color="Blue" />
+            <Label Grid.Column="1"
+               Text="Row 0, Column 1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1"
+                 Color="Teal" />
+            <Label Grid.Row="1"
+               Text="Row 1, Column 0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="1"
+                 Grid.Column="1"
+                 Color="Purple" />
+            <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="Row1, Column 1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <BoxView Grid.Row="2"
+                 Grid.ColumnSpan="2"
+                 Color="Red" />
+            <Label Grid.Row="2"
+               Grid.ColumnSpan="2"
+               Text="Row 2, Columns 0 and 1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        </Grid>
+
+        <BoxView Color="CornflowerBlue"
+             CornerRadius="10"
+             WidthRequest="160"
+             HeightRequest="30"
+             VerticalOptions="Center"
+             HorizontalOptions="Center" />
+
+        <StackLayout Margin="20">
+            <Label Text="Primary colors" />
+            <BoxView Color="Red"
+                 HeightRequest="30" />
+            <BoxView Color="Yellow"
+                 HeightRequest="30" />
+            <BoxView Color="Blue"
+                 HeightRequest="30" />
+            <Label Text="Secondary colors" />
+            <BoxView Color="Green"
+                 HeightRequest="30" />
+            <BoxView Color="Orange"
+                 HeightRequest="30" />
+            <BoxView Color="Purple"
+                 HeightRequest="30" />
+        </StackLayout>
+
+
+    </VerticalStackLayout>
+
+</ContentPage>
