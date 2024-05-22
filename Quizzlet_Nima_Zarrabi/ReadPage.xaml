@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlashQuizz_Nima_Zarrabi.ReadPage"
+             Title="Read">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="BtnDisReadPage"
+            Text="Last" 
+            SemanticProperties.Hint="Go to the last page"
+            Clicked="OnDisReadPage"
+            HorizontalOptions="Fill" />
+        
+    </VerticalStackLayout>
+</ContentPage>

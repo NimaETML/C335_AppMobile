@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlashQuizz_Nima_Zarrabi.MvvmAnimationPage"
+             xmlns:ViewModels="clr-namespace:FlashQuizz_Nima_Zarrabi.ViewModels"
+             xmlns:s="clr-namespace:System;assembly=mscorlib"
+             Title="MvvmAnimationPage">
+
+    <ContentPage.BindingContext>
+        <ViewModels:MvvmAnimationPageViewModel />
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout>
+        <Label 
+        Text="MVVM Animations !!!"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" />
+
+
+        <Image
+            x:Name="MvvmAnimationPageImage"
+            Source="appmobile_palette.png"
+            HeightRequest="165"
+            Aspect="AspectFit"
+            SemanticProperties.Description="slay logo i made"
+            Margin="28"/> 
+
+        <Button
+        x:Name="BtnMvvmCancelAnimation"
+        Text="Cancel all animations" 
+        SemanticProperties.Hint="Opens MVVM link int"
+        Command="{Binding CancelBoxAnimationUIAction}"
+        HorizontalOptions="Fill"
+        Margin="5" />
+
+        <HorizontalStackLayout HorizontalOptions="Center" Margin="0,25,0,0">
+            <Label Text="{Binding Label}" VerticalTextAlignment="Center" />
+            <Switch IsToggled="{Binding Toggled}" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Margin="0,25,0,5">
+            <Button
+            x:Name="BtnMvvmGoLeft"
+            Text="&lt;&lt;"
+            Command="{Binding MoveBoxCommand}">
+                <Button.CommandParameter>
+                    <s:Int32>-1</s:Int32>
+                </Button.CommandParameter>
+            </Button>
+
+            <Button
+            Margin="0,0,0,0"
+            x:Name="BtnMvvmGoRight"
+            Text=">>"
+            Command="{Binding MoveBoxCommand}">
+                <Button.CommandParameter>
+                    <s:Int32>+1</s:Int32>
+                </Button.CommandParameter>
+            </Button>
+        </HorizontalStackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="{Binding Speed,StringFormat='Speed \{0\}'}" />
+            <Slider WidthRequest="150" Value="{Binding Speed}" Minimum="1" Maximum="50" />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

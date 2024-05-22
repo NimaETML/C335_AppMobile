@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlashQuizz_Nima_Zarrabi.MainPage"
+             Style="{StaticResource PageStyle}">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            
+            
+        Padding="30,0"
+        Spacing="21">
+
+            <Image
+            Source="readme_logo_text.png"
+            HeightRequest="170"
+            Aspect="AspectFit"
+            SemanticProperties.Description="Logo FlashQuizz" />
+
+            <Label
+            Text="FlashQuizz"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+            Text="Your last opened Quizz"
+            Style="{StaticResource ListHeader}"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="this is the layout page, it has a cool image" />
+
+            
+            
+            
+            
+            <Button
+               x:Name="CounterBtn"
+               Text="Click me" 
+               SemanticProperties.Hint="Counts the number of times you click"
+               Clicked="OnCounterClicked"
+               HorizontalOptions="Fill" />
+
+
+            <BoxView Color="CornflowerBlue"
+        CornerRadius="10"
+        WidthRequest="160"
+        HeightRequest="30"
+        VerticalOptions="Center"
+        HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

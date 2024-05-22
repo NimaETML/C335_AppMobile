@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FlashQuizz_Nima_Zarrabi.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FlashQuizz_Nima_Zarrabi"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="True"
+    Shell.BackgroundColor="{StaticResource Secondary}"
+    Title="Quizzlet_Nima_Zarrabi">
+
+
+    <Tab Title="Home">
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}" 
+        Route="MainPage"/>
+    </Tab>
+
+    <Tab Title="Animation">
+        <ShellContent
+        Title="Animation"
+        ContentTemplate="{DataTemplate local:AnimationPage}" 
+        Route="AnimationPage"/>
+    </Tab>
+
+    <Tab Title="MvvmObject">
+        <ShellContent
+        Title="MvvmObject"
+        ContentTemplate="{DataTemplate local:MvvmObjectPage}" 
+        Route="MvvmObjectPage"/>
+    </Tab>
+</Shell>

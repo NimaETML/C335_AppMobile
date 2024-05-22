@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:FlashQuizz_Nima_Zarrabi.ViewModels"
+             x:Class="FlashQuizz_Nima_Zarrabi.AnimationPage"
+             Title="AnimationPage">
+    <VerticalStackLayout>
+        <Label 
+        Text="Animations !!!"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" />
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <BoxView 
+            Color="Green"
+            HeightRequest="100"
+            WidthRequest="100"
+            VerticalOptions="Center"/>
+            <Frame 
+            BackgroundColor="LightGrey"
+            HeightRequest="100"
+            WidthRequest="100"
+            CornerRadius="0"  
+                HorizontalOptions="Center"
+            VerticalOptions="Center">
+                <Label Text="Green"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   TextColor="Green"/>
+            </Frame>
+        </HorizontalStackLayout>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Green"
+            Grid.Row="0" Grid.Column="0"
+            TextColor="Green"/>
+
+        </Grid>
+
+        <Grid ColumnSpacing="10" RowSpacing="10" VerticalOptions="Center" HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+
+            <BoxView Color="Gray" Grid.Row="0" Grid.Column="0"/>
+            <BoxView Color="Gray" Grid.Row="0" Grid.Column="1"/>
+            <BoxView Color="Gray" Grid.Row="0" Grid.Column="2"/>
+            <BoxView Color="Gray" Grid.Row="0" Grid.Column="3"/>
+            <BoxView Color="Gray" Grid.Row="0" Grid.Column="4"/>
+            <BoxView Color="Gray" Grid.Row="0" Grid.Column="5"/>
+            <BoxView Color="Gray" Grid.Row="0" Grid.Column="6"/>
+
+            <BoxView Color="Gray" Grid.Row="1" Grid.Column="0"/>
+            <BoxView Color="Gray" Grid.Row="1" Grid.Column="1"/>
+            <BoxView Color="Gray" Grid.Row="1" Grid.Column="2"/>
+            <BoxView Color="Gray" Grid.Row="1" Grid.Column="3"/>
+            <BoxView Color="Gray" Grid.Row="1" Grid.Column="4"/>
+            <BoxView Color="Gray" Grid.Row="1" Grid.Column="5"/>
+            <BoxView Color="Gray" Grid.Row="1" Grid.Column="6"/>
+
+
+        </Grid>
+
+        <Button
+        x:Name="BtnMvvmAnimationPage"
+        Text="MVVM Animation" 
+        SemanticProperties.Hint="Opens MVVM Animation page"
+        Clicked="OnClickBtnMvvmAnimationPage"
+        HorizontalOptions="Fill"
+            Margin="10" />
+
+        <Image
+            x:Name="AnimationPageImage"
+            Source="readme_logo.png"
+            HeightRequest="165"
+            Aspect="AspectFit"
+            SemanticProperties.Description="slay logo i made"
+            Margin="28"/> 
+
+        <Button
+        x:Name="BtnCancelAnimation"
+        Text="Cancel all animations" 
+        SemanticProperties.Hint="Opens MVVM link int"
+        Clicked="CancelAnimation"
+        HorizontalOptions="Fill"
+            Margin="5" />
+        
+        <StackLayout Orientation="Horizontal" Spacing="10" Margin="5">
+            <Button
+            x:Name="BtnRotateLeft"
+            Text="Left" 
+            Clicked="RotateLeft"
+            HorizontalOptions="FillAndExpand" />
+
+        <Button
+            x:Name="BtnRotateRight"
+            Text="Right" 
+            Clicked="RotateRight"
+            HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="10" Margin="5">
+            <Button
+            x:Name="BtnScaleUp"
+            Text="Scale Up" 
+            Clicked="ScaleUp"
+            HorizontalOptions="FillAndExpand" />
+
+        <Button
+            x:Name="BtnScaleDown"
+            Text="Scale Down" 
+            Clicked="ScaleDown"
+            HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button
+            x:Name="BtnTranslateLeft"
+            Text="Go Left" 
+            Clicked="TranslateLeft"
+            HorizontalOptions="FillAndExpand"
+            Margin="6" />
+
+            <Button
+            x:Name="BtnTranslateRight"
+            Text="Go Right" 
+            Clicked="TranslateRight"
+            HorizontalOptions="FillAndExpand"
+            Margin="6" />
+
+            <Button
+            x:Name="BtnTranslateUp"
+            Text="Go Up" 
+            Clicked="TranslateUp"
+            HorizontalOptions="FillAndExpand"
+            Margin="6" />
+
+            <Button
+            x:Name="BtnTranslateDown"
+            Text="Go Down" 
+            Clicked="TranslateDown"
+            HorizontalOptions="FillAndExpand"
+            Margin="6" />
+        </StackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
