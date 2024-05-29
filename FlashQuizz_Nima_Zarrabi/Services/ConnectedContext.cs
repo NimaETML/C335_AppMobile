@@ -10,7 +10,7 @@ namespace FlashQuizz_Nima_Zarrabi.Services
 {
     public class ConnectedContext : DbContext
     {
-        public DbSet<Card> Cards { get; set; }
+        public DbSet<Set> Sets { get; set; }
 
         public ConnectedContext()
         {

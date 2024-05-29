@@ -10,9 +10,9 @@ namespace FlashQuizz_Nima_Zarrabi.Models
     {
         public int Id {  get; set; }
 
-        public string? Question { get; set; }
+        public string Question { get; set; }
 
-        public string? Answer { get; set; }
+        public string Answer { get; set; }
 
         public string? Hint { get; set; }
 

@@ -23,7 +23,7 @@
         ContentTemplate="{DataTemplate local:AnimationPage}" 
         Route="AnimationPage"/>
     </Tab>
-m
+
     <Tab Title="MvvmInt">
         <ShellContent
         Title="MvvmInt"

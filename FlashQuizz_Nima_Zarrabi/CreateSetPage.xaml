@@ -26,12 +26,12 @@
             </HorizontalStackLayout>
         
         <!-- command a deux arguments, pas tout a fait fonctionnel-->
-            <!--<Button BorderColor="{StaticResource PrimaryDark}"
+            <Button BorderColor="{StaticResource PrimaryDark}"
                     BorderWidth="5"
                     Margin="0,5,0,0"
                     Text="Add"
                     MaximumWidthRequest="300"
-                    Command="{Binding AddSetCommand}">
+                    Command="{Binding Source={x:Reference vm}, Path=BuildSetCommand}">
                 <Button.CommandParameter>
                     <MultiBinding>
                         <MultiBinding.Bindings>
@@ -40,7 +40,7 @@
                         </MultiBinding.Bindings>
                     </MultiBinding>
                 </Button.CommandParameter>
-            </Button>--> 
+            </Button> 
                
             <Label Text="Content of the magic lamp" FontSize="Subtitle" HorizontalTextAlignment="Center" Margin="0,20,0,0" />
             <Border Margin="15,0,15,0">

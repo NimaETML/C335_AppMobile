@@ -27,7 +27,7 @@
     <Tab Title="MvvmObject">
         <ShellContent
         Title="MvvmObject"
-        ContentTemplate="{DataTemplate local:MvvmObjectPage}" 
+        ContentTemplate="{DataTemplate local:CreateSetPage}" 
         Route="MvvmObjectPage"/>
     </Tab>
 </Shell>

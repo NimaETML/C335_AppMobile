@@ -5,38 +5,68 @@ using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Maui.Controls;
 
 namespace FlashQuizz_Nima_Zarrabi.ViewModels;
 
-// PAS OUBLIER LE NUGGET Microsoft.EntityFrameworkCore.Sqlite
-public partial class MvvmSetViewModel : ObservableObject
+    public partial class MvvmSetViewModel : ObservableObject
 {
 
     [ObservableProperty]
+    private string titleEntry;
+
+    [ObservableProperty]
+    private string description;
+
+    //[ObservableProperty]
+    //private Card[] cardEntry;
+
+    [ObservableProperty]
     [NotifyCanExecuteChangedFor(nameof(AddSetCommand))]
-    private string setEntry = "";
+    private Set? setEntry;
 
     [ObservableProperty]
     private ObservableCollection<object> sets = new();
 
     [RelayCommand(CanExecute = nameof(AddSetCanExecute))]
 
-    private async Task AddSet(string title, string description)
+    private async Task AddSet(Set newSet)
     {
-        var set = new Set { Title = title, Description = description };
+        //var set = new Set { Title = title,  };
         using (var dbContext = new ConnectedContext())
         {
-            dbContext.Add(set);
-            await dbContext.SaveChangesAsync(); 
+            dbContext.Add(newSet);
+            await dbContext.SaveChangesAsync();
         }
-        //Avoid full db refresh upon adding a new greaterWish
-        Sets.Add(set);
-        SetEntry = "";
+        //Avoid full db refresh upon adding a new set
+        Sets.Add(newSet);
+        SetEntry = null;
+    }
+
+
+    /// <summary>
+    /// //                                                   PROBLEM HERE
+    /// </summary>
+    /// <param name="titleEntry"></param>
+    /// <param name="description"></param>
+    [RelayCommand]
+    private void BuildSet(string titleEntry, string description)
+    {
+        Set set = new Set{ Title = titleEntry, Description = description};
+
+        AddSet(set);
     }
 
     private bool AddSetCanExecute()
     {
-        return !string.IsNullOrEmpty(SetEntry);
+        if (SetEntry == null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public void CrudUpdateAllSets()
@@ -45,16 +75,16 @@ public partial class MvvmSetViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private void RefreshSetsFromDB(ConnectedContext? context=null)
+    private void RefreshSetsFromDB(ConnectedContext? context = null)
     {
         Sets.Clear();
-        using (var dbContext = context??new ConnectedContext())
+        using (var dbContext = context ?? new ConnectedContext())
         {
             foreach (var dbSet in dbContext.Sets)
             {
                 Sets.Add(dbSet);
             }
-        } 
+        }
     }
 
     [RelayCommand]
@@ -67,13 +97,13 @@ public partial class MvvmSetViewModel : ObservableObject
         string updatedTitle = await Shell.Current.DisplayPromptAsync(title: "Modifier ", message: "", placeholder: set.Title);
 
         //Si l'utilisateur n'appuie pas sur Cancel
-        if(updatedTitle != null)
+        if (updatedTitle != null)
         {
             using (var dbContext = new ConnectedContext())
             {
                 //TODO : Faire la mise à jour uniquement si la definition a changé
                 await dbContext.Sets
-                    .Where(dbGreaterWish => dbGreaterWish.Id== set.Id)
+                    .Where(dbGreaterWish => dbGreaterWish.Id == set.Id)
                     .ExecuteUpdateAsync(setters => setters.SetProperty(dbSet => dbSet.Description, updatedTitle));
 
 
@@ -89,7 +119,7 @@ public partial class MvvmSetViewModel : ObservableObject
         Trace.WriteLine($"Deleting {set}");
         using (var dbContext = new ConnectedContext())
         {
-            await dbContext.Cards
+            await dbContext.Sets
                 .Where(dbSet => dbSet.Id == set.Id)
                 .ExecuteDeleteAsync();
 

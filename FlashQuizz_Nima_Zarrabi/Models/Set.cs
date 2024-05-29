@@ -10,11 +10,15 @@ namespace FlashQuizz_Nima_Zarrabi.Models
     {
         public int Id {  get; set; }
 
-        public string? Title { get; set; }
+        public string Title { get; set; }
 
         public string? Description { get; set; }
 
+        public bool Valid { get; set; }
+
         public DateTime CreationDate { get; set; }
+
+        //public Card[]? Cards { get; set; }
 
         public override string ToString()
         {
